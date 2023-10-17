@@ -1,0 +1,4 @@
+modelscope
+jieba
+sacremoses
+subword_nmt

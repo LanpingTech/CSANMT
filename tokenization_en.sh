@@ -1,0 +1,1 @@
+perl ./mosesdecoder/scripts/tokenizer/tokenizer.perl -l en < train.en > train.en.tok
