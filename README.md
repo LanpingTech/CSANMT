@@ -66,13 +66,13 @@ python download_model.py
 1. 英文数据集的预处理
 ```bash
 bash tokenization_en.sh
-subword-nmt apply-bpe -c bpe.en < train.en.tok > train.en.tok.bpe
+subword-nmt apply-bpe -c damo/nlp_csanmt_translation_en2zh_base/bpe.en < train.en.tok > train.en.tok.bpe
 ```
 
 2. 中文数据集的预处理
 ```bash
 python tokenization_zh.py
-subword-nmt apply-bpe -c bpe.zh < train.zh.tok > train.zh.tok.bpe
+subword-nmt apply-bpe -c damo/nlp_csanmt_translation_en2zh_base/bpe.zh < train.zh.tok > train.zh.tok.bpe
 ```
 
 ## 微调
@@ -97,7 +97,7 @@ subword-nmt apply-bpe -c bpe.zh < train.zh.tok > train.zh.tok.bpe
         "train_batch_size_words": 1024,
         "scale_l1": 0.0,
         "scale_l2": 0.0,
-        "train_max_len": 100,
+        "train_max_len": 100, #这里的最大训练长度是指读取句子的长度。数值越大读取的句子越长，最好设置为512，太大显存会爆。
         "num_of_epochs": 200, #这里的训练轮数越大越好
         "save_checkpoints_steps": 500,
         "num_of_samples": 4,

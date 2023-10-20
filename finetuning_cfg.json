@@ -30,8 +30,8 @@
         "max_decoded_trg_len": 100
     }, 
     "dataset": {
-        "train_src": "../train.en.tok.bpe",
-        "train_trg": "../train.zh.tok.bpe",
+        "train_src": "../../train.en.tok.bpe",
+        "train_trg": "../../train.zh.tok.bpe",
         "src_vocab": {
           "file": "src_vocab.txt"
         },
